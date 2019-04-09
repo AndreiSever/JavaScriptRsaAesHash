@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>JavaScript File Encryption App</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link href="http://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" />
+		<link href="assets/css/style.css" rel="stylesheet" />
+
+	</head>
+
+	<body>
+
+		<a class="back"></a>
+
+		<div id="stage">
+			
+			<div id="step1">
+				<div class="content">
+					<div id="step13">
+						<a class="button encrypt green">Зашифровать RSA</a>
+					</div>
+					<div id="step12">
+						<a class="button encrypt green">Зашифровать Hash</a>
+					</div>
+					<div id="step11">
+						<a class="button encrypt green">Зашифровать AES</a>
+						<a class="button decrypt magenta">Расшифровать AES</a>
+					</div>
+				</div>
+			</div>
+			<div id="step2">
+					<div id="step212">
+						<div class="content if-encrypt">
+							<h1>Выберите файл который хотите зашифровать Hash</h1>
+							<a class="button browse blue">Browse</a>
+
+							<input type="file" id="encrypt-input" />
+						</div>
+					</div>
+					<div id="step211">
+						<div class="content if-encrypt">
+							<h1>Выберите файл который хотите зашифровать AES</h1>
+							<a class="button browse blue">Browse</a>
+
+							<input type="file" id="encrypt-input" />
+						</div>
+
+						<div class="content if-decrypt">
+							<h1>Выберите файл который хотите расшифровать AES</h1>
+							<a class="button browse blue">Browse</a>
+
+							<input type="file" id="decrypt-input" />
+						</div>
+					</div>
+			</div>
+
+			<div id="step3">
+				<div id="step311">
+					<div class="content if-encrypt">
+						<h1>Введите фразу, с помощью которой будет зашифрован файл AES</h1>
+
+						<input type="password" />
+						<a class="button process red">Зашифровать!</a>
+					</div>
+
+					<div class="content if-decrypt">
+						<h1>Введите фразу, с помощью которой будет расшифрован файл AES</h1>
+
+						<input type="password" />
+						<a class="button process red">Расшифровать!</a>
+					</div>
+				</div>
+				<div id="step312">
+					<div class="content if-encrypt">
+						<h1>Введите фразу, с помощью которой будет зашифрован файл Hash</h1>
+
+						<input type="password" />
+						<a class="button process red">Зашифровать!</a>
+					</div>
+				</div>
+				<div id="step313">
+					
+					
+					<div class="content if-encrypt" >
+						<h1 >Нажмите кнопку чтобы зашифровать методом RSA</h1>
+						<input id="data" style="width: 100%; height: 30px; margin-bottom:5px; background-color: white; border: 1px solid gray; font-size: 21px;" placeholder="Ввести сюда текст:"/>
+						<input id="encryptedd" style="width: 100%; height: 30px; margin-bottom:5px; background-color: white; border: 1px solid gray; font-size: 21px;" placeholder="Шифрованный публичным ключом:"/>
+						<input id="reply" style="width: 100%; height: 30px; margin-bottom:5px; background-color: white; border: 1px solid gray; font-size: 21px;" placeholder="Расшифрованный приватным ключом:"/>
+
+						<a class="button process red">Зашифровать!</a>
+					</div>
+				</div>
+			</div>
+			<div id="step4">
+
+				<div class="content">
+					<h1>Файл готов!</h1>
+					<a class="button download green">Скачать</a>
+				</div>
+
+			</div>
+		</div>
+
+		<footer>
+        </footer>
+
+	</body>
+
+	<!-- Include the AES algorithm of the crypto library -->
+	<script src="assets/js/aes.js"></script>
+	<script src="assets/js/hmac.js"></script>
+	<script src="assets/js/sha256.js"></script>
+	<script src="assets/js/jsencrypt.js"></script>
+		
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="assets/js/script3.js"></script>
+
+	<script>
+	
+	</script>
+
+</html>
